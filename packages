@@ -1,0 +1,18 @@
+# utils ------------------
+man-db
+git
+vim
+neovim
+lsd
+tmux
+bat
+openssh
+tree
+speedtest-cli
+gdu
+ranger
+# Development ------------
+python
+python-pip
+base-devel       # for c and cpp , includes gcc & g++
+jdk-openjdk      # for java

@@ -1,0 +1,7 @@
+require("keymaps")
+require("sets")
+require("plugins")
+require("plugins_configs.nvimtree")
+require("plugins_configs.telescope")
+require("plugins_configs.colorscheme")
+require("plugins_configs.treesitter")
