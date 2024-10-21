@@ -1,11 +1,11 @@
 TERMINAL :
-+ change terminal font : settings > terminal > integrated:Font Family
 + change terminal cursor : Terminal Settings > Defaults > Appearance 
 + disable terminal bell : Terminal Settings > Defaults > Advanced 
 
 
 VSCODE :
 + install extensions : wsl, python, c/c++, java
++ change terminal font : settings > terminal > integrated:Font Family
 
 GIT & GITHUB:
 git config --global user.name "ram"

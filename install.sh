@@ -31,7 +31,7 @@ echo -e "${reset}"
 ## Downloads _______________________________________________#
 echo -e "${red} Downloading Packages ! ${reset}" && sleep 0.3 
 
-#sudo pacman -Syy neofetch vim neovim git lsd alacritty evince tree htop tmux
+sudo pacman -Syy --needed $(grep -v '^#' packages | sed 's/#.*//' | xargs)
 
 if ! command -v yay &> /dev/null
 then
@@ -45,5 +45,7 @@ fi
 [ ! -d ~/.tmux/plugins/tpm ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 #git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 #git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+source ~/.bashrc
 
 echo -e "${green} Done !!!!${reset}"
