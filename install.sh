@@ -7,15 +7,15 @@ purple="\033[1;35m"
 cyan="\033[1;36m"
 reset="\033[m"
 
-echo -e "${green}" && sleep 0.3
+echo -e "${purple}" && sleep 0.3
 echo -e "=================================================" 
 echo -e "================= INSTALLING ====================" 
 echo -e "================================================="
 
 ## Downloads _______________________________________________#
-echo -e "${red} Downloading Packages ! ${reset}" && sleep 0.3 
-
-sudo pacman -Syy --needed $(grep -v '^#' packages | sed 's/#.*//' | xargs)
+echo -e "${cyan} Downloading Packages ! ${reset}" && sleep 0.3 
+sudo pacman -Syy --needed $(grep -v '^#' packages | sed 's/#.*//' | xargs) 2> /dev/null
+echo -e "${green} Done !${reset}" && sleep 0.3 
 
 ./scripts/yay.sh
 ./scripts/github.sh
@@ -25,6 +25,7 @@ sudo pacman -Syy --needed $(grep -v '^#' packages | sed 's/#.*//' | xargs)
 #git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Configurations __________________________________________#
+echo -e "${cyan} Copying Config Files ! ${reset}" && sleep 0.3 
 cp -f ./configs/shell/bash/bashrc ~/.bashrc
 cp -f ./configs/editor/vim/vimrc ~/.vimrc 
 mkdir -p ~/.vim
@@ -43,4 +44,4 @@ echo -e "${reset}"
 
 source ~/.bashrc
 
-echo -e "${green} Done !!!!${reset}"
+echo -e "${green} Done !${reset}"
